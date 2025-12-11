@@ -1,0 +1,1290 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PT Hani | Produsen Garmen Terpercaya di Indonesia</title>
+    
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome untuk Ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* --- GLOBAL STYLES & RESET --- */
+        :root {
+            --primary-color: #0f2c4c;
+            --secondary-color: #c9a961;
+            --accent-color: #f8f9fa;
+            --text-color: #343a40;
+            --light-text-color: #f8f9fa;
+            --max-width: 1200px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px; 
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.7;
+            color: var(--text-color);
+            background-color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        h1, h2, h3 {
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        h1 { font-size: 3.5rem; }
+        h2 { 
+            font-size: 2.8rem; 
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 3rem;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+
+        section {
+            padding: 6rem 0;
+        }
+
+        /* --- UTILITY CLASSES --- */
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2.5rem;
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-color);
+            color: var(--light-text-color);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--light-text-color);
+            color: var(--light-text-color);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--light-text-color);
+            color: var(--primary-color);
+        }
+
+        .card {
+            background: #fff;
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        /* --- ANIMATIONS --- */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* --- HEADER & NAVIGATION --- */
+        .main-header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            transition: all 0.4s ease;
+            padding: 1rem 0;
+        }
+
+        .main-header.scrolled {
+            padding: 0.5rem 0;
+        }
+
+        .main-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .logo i {
+            color: var(--secondary-color);
+            margin-right: 0.5rem;
+            font-size: 2.2rem;
+        }
+        
+        .main-header.scrolled .logo {
+            font-size: 1.6rem;
+        }
+        .main-header.scrolled .logo i {
+            font-size: 1.8rem;
+        }
+
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        .main-nav a {
+            color: var(--primary-color);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            margin: 0 0.5rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border-radius: 5px;
+            position: relative;
+        }
+        
+        .main-nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            background-color: var(--secondary-color);
+            transition: all 0.3s ease;
+        }
+
+        .main-nav a:hover::after {
+            width: 80%;
+            left: 10%;
+        }
+
+        .main-nav a.nav-link-active {
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+        .main-nav a.nav-link-active::after {
+            width: 80%;
+            left: 10%;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        /* --- HERO SECTION --- */
+        #hero {
+            background: linear-gradient(rgba(15, 44, 76, 0.7), rgba(15, 44, 76, 0.7)), url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=2070&auto=format&fit=crop') no-repeat center center/cover;
+            height: 100vh;
+            color: var(--light-text-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 2rem;
+            position: relative;
+        }
+
+        #hero h1 {
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        #hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            font-weight: 300;
+        }
+
+        .hero-buttons {
+            margin-top: 2rem;
+        }
+
+        .hero-buttons .btn {
+            margin: 0.5rem;
+        }
+
+        /* --- ABOUT SECTION --- */
+        #about {
+            background-color: var(--accent-color);
+        }
+        #about .about-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        #about img {
+            display: none; /* Gambar dihapus */
+        }
+
+        #about h3 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+        
+        #about .text-content {
+            padding: 1rem;
+            text-align: center;
+        }
+
+        /* --- VISION & MISSION SECTION --- */
+        #vision-mission {
+            background-color: #ffffff;
+        }
+
+        .vm-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .vm-box {
+            background: var(--light-text-color);
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .vm-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .vm-box h3 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .vm-box h3 i {
+            color: var(--secondary-color);
+            margin-right: 1rem;
+            font-size: 2rem;
+        }
+
+        .vm-box p, .vm-box ul {
+            font-size: 1.05rem;
+        }
+
+        .vm-box ul {
+            list-style: none;
+            padding-left: 1rem;
+        }
+
+        .vm-box ul li {
+            margin-bottom: 0.8rem;
+            position: relative;
+        }
+        
+        .vm-box ul li::before {
+            content: '▸';
+            color: var(--secondary-color);
+            font-weight: bold;
+            position: absolute;
+            left: -1rem;
+        }
+
+        /* --- PORTFOLIO SECTION --- */
+        #portfolio {
+            background-color: var(--accent-color);
+        }
+
+        .filter-buttons {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .filter-btn {
+            background: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            padding: 0.5rem 1.5rem;
+            margin: 0.5rem;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background-color: var(--primary-color);
+            color: var(--light-text-color);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .portfolio-item {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+        }
+        
+        .portfolio-item .portfolio-image-placeholder {
+            width: 100%;
+            height: 250px;
+            background-color: #e9ecef;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--primary-color);
+        }
+
+        .portfolio-item .portfolio-image-placeholder i {
+            font-size: 4rem;
+        }
+
+        .portfolio-info {
+            padding: 1.5rem;
+        }
+
+        .portfolio-info h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        /* --- LAYANAN SECTION --- */
+        #layanan .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        #layanan .card i {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        #layanan .card h3 {
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        /* --- TESTIMONIALS SECTION --- */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: var(--light-text-color);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-left: 5px solid var(--secondary-color);
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+
+        .testimonial-author i {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-right: 1rem;
+        }
+
+        .testimonial-author h5 {
+            color: var(--primary-color);
+            margin-bottom: 0.2rem;
+        }
+
+        .testimonial-author p {
+            font-size: 0.9rem;
+            color: #777;
+            margin: 0;
+        }
+
+        /* --- WHY US SECTION --- */
+        #why-us {
+            background-color: var(--primary-color);
+            color: var(--light-text-color);
+        }
+        
+        #why-us h2 {
+            color: var(--light-text-color);
+        }
+
+        #why-us h2::after {
+            background-color: var(--secondary-color);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .feature-item {
+            padding: 1.5rem;
+        }
+
+        .feature-item i {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .feature-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* --- FAQ SECTION --- */
+        #faq {
+            background-color: var(--accent-color);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: #fff;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 1.5rem;
+            font-size: 1.1rem;
+            text-align: left;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .faq-question i {
+            transition: transform 0.3s ease;
+        }
+
+        .faq-question.active i {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+            padding: 0 1.5rem;
+        }
+
+        .faq-answer.active {
+            max-height: 500px;
+            padding: 0 1.5rem 1.5rem 1.5rem;
+        }
+
+        /* --- CONTACT SECTION --- */
+        #contact .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        #contact .contact-info {
+            padding: 2rem;
+        }
+
+        #contact .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        #contact .contact-item i {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            margin-right: 1rem;
+            width: 30px;
+        }
+
+        #contact .contact-form {
+            background-color: var(--accent-color);
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        #contact .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        #contact .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        #contact .form-group input,
+        #contact .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+        }
+
+        #contact .form-group textarea {
+            resize: vertical;
+        }
+
+        .map-wrapper {
+            grid-column: 1 / -1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            height: 400px;
+            margin-top: 2rem;
+        }
+
+        .map-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* --- FOOTER --- */
+        .main-footer {
+            background-color: #111;
+            color: var(--light-text-color);
+            padding: 4rem 0 2rem 0;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-column h3 {
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--secondary-color);
+        }
+
+        .footer-column p, .footer-column ul {
+            font-size: 0.9rem;
+            line-height: 1.8;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        .newsletter-form {
+            display: flex;
+            margin-top: 1rem;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 5px 0 0 5px;
+        }
+
+        .newsletter-form button {
+            padding: 0.8rem 1.5rem;
+            border: none;
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #333;
+            font-size: 0.9rem;
+        }
+
+        .social-links a {
+            color: var(--light-text-color);
+            font-size: 1.5rem;
+            margin: 0 0.75rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* --- RESPONSIVE DESIGN --- */
+        @media (max-width: 992px) {
+            #layanan .services-grid,
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hamburger { display: block; }
+            .main-nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--primary-color);
+                flex-direction: column;
+                text-align: center;
+                padding: 1rem 0;
+            }
+            .main-nav ul.nav-active {
+                display: flex;
+            }
+            .main-nav a {
+                color: var(--light-text-color);
+                display: block;
+                padding: 1rem;
+            }
+            .main-nav a:hover {
+                background-color: var(--secondary-color);
+                color: var(--primary-color);
+            }
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 2.2rem; }
+            .vm-container,
+            #contact .contact-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        /* --- LANDSCAPE MODE OPTIMIZATION --- */
+        @media (max-height: 500px) and (orientation: landscape) {
+            h1 { font-size: 2.8rem; }
+            h2 { 
+                font-size: 2.2rem; 
+                margin-bottom: 2rem;
+            }
+            section {
+                padding: 3rem 0;
+            }
+            #hero {
+                height: 180vh; 
+            }
+            .features-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            #layanan .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .vm-container {
+                grid-template-columns: 1fr 1fr;
+            }
+            #contact .contact-container {
+                grid-template-columns: 1fr 1fr;
+            }
+            .map-wrapper {
+                height: 300px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- =================== HEADER =================== -->
+    <header class="main-header">
+        <div class="container">
+            <a href="#hero" class="logo"><i class="fa-solid fa-shirt"></i> PT HANI</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#hero" class="nav-link">Beranda</a></li>
+                    <li><a href="#about" class="nav-link">Tentang</a></li>
+                    <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                    <li><a href="#layanan" class="nav-link">Layanan</a></li>
+                    <li><a href="#contact" class="nav-link">Kontak</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- =================== HERO SECTION =================== -->
+        <section id="hero">
+            <h1>Produksi Garmen Berstandar Internasional</h1>
+            <p>PT Hani adalah mitra terpercaya Anda untuk solusi garmen end-to-end. Kami mengutamakan kualitas, ketepatan waktu, dan kepuasan klien.</p>
+            <div class="hero-buttons">
+                <a href="#portfolio" class="btn">Lihat Portfolio</a>
+                <a href="#contact" class="btn btn-outline">Hubungi Kami</a>
+            </div>
+        </section>
+
+        <!-- =================== ABOUT SECTION =================== -->
+        <section id="about">
+            <div class="container">
+                <div class="about-content fade-in">
+                    <div class="text-content">
+                        <h3>Tentang PT Hani</h3>
+                        <p>Sejak 2005, PT Hani telah menjadi salah satu produsen garmen paling dihormati di Indonesia. Perjalanan kami ditandai oleh dedikasi pada kerajinan, inovasi, dan etika bisnis yang kuat.</p>
+                        <p>Kami tidak hanya memproduksi pakaian; kami membangun kemitraan. Setiap proses dikerjakan dengan presisi tinggi untuk memastikan produk akhir yang melampaui ekspektasi.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================== VISION & MISSION SECTION =================== -->
+        <section id="vision-mission">
+            <div class="container">
+                <h2>Visi & Misi Kami</h2>
+                <div class="vm-container fade-in">
+                    <div class="vm-box fade-in">
+                        <h3><i class="fa-solid fa-eye"></i> Visi</h3>
+                        <p>Menjadi perusahaan garmen terdepan di Indonesia yang diakui secara internasional karena kualitas produk, inovasi desain, dan praktik bisnis yang berkelanjutan.</p>
+                    </div>
+                    <div class="vm-box fade-in">
+                        <h3><i class="fa-solid fa-bullseye"></i> Misi</h3>
+                        <ul>
+                            <li>Menyediakan produk garmen dengan kualitas terbaik.</li>
+                            <li>Mengadopsi teknologi terkini dan inovasi desain.</li>
+                            <li>Memberikan pelayanan prima untuk kemitraan jangka panjang.</li>
+                            <li>Bertanggung jawab terhadap lingkungan dan karyawan.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================== PORTFOLIO SECTION =================== -->
+        <section id="portfolio">
+            <div class="container">
+                <h2>Portfolio Produk</h2>
+                <div class="filter-buttons fade-in">
+                    <button class="filter-btn active" data-filter="all">Semua</button>
+                    <button class="filter-btn" data-filter="celana">Celana</button>
+                    <button class="filter-btn" data-filter="koko-anak">Koko Anak</button>
+                    <button class="filter-btn" data-filter="hijab">Hijab</button>
+                    <button class="filter-btn" data-filter="aksesoris">Aksesoris</button>
+                </div>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item fade-in" data-category="celana">
+                        <div class="portfolio-image-placeholder">
+                            <i class="fa-solid fa-person"></i>
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>Celana Chinos Pria</h4>
+                            <p>Kenyamanan dan gaya dalam satu paket, cocok untuk acara formal dan kasual.</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" data-category="koko-anak">
+                        <div class="portfolio-image-placeholder">
+                            <i class="fa-solid fa-child"></i>
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>Kemeja Koko Anak</h4>
+                            <p>Desain modern dengan bahan yang nyaman, membuat anak tampil tampan dan percaya diri.</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" data-category="hijab">
+                        <div class="portfolio-image-placeholder">
+                            <i class="fa-solid fa-person-dress"></i>
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>Hijab Premium Voal</h4>
+                            <p>Material voal yang ringan dan breathable, dengan desain motif yang eksklusif.</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" data-category="aksesoris">
+                        <div class="portfolio-image-placeholder">
+                            <i class="fa-solid fa-hat-cowboy"></i>
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>Topi Custom Bordir</h4>
+                            <p>Produksi topi dengan bordir logo atau desain khusus untuk komunitas, perusahaan, atau merek Anda.</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" data-category="celana">
+                        <div class="portfolio-image-placeholder">
+                            <i class="fa-solid fa-person"></i>
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>Celana Jeans Wanita</h4>
+                            <p>Cutting yang pas dan kualitas denim terbaik untuk tampilan stylish sepanjang hari.</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in" data-category="koko-anak">
+                        <div class="portfolio-image-placeholder">
+                            <i class="fa-solid fa-child"></i>
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>Setelan Koko Anak</h4>
+                            <p>Paket lengkap atasan dan bawahan dengan desain matching, praktis dan stylish.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================== TESTIMONIALS SECTION =================== -->
+        <section id="testimonials">
+            <div class="container">
+                <h2>Apa Kata Klien Kami</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card fade-in">
+                        <p>"PT Hani adalah mitra produksi yang sangat andal. Kualitas jahitannya rapi dan pengirimannya selalu tepat waktu. Sangat merekomendasikan!"</p>
+                        <div class="testimonial-author">
+                            <i class="fa-solid fa-user-circle"></i>
+                            <div>
+                                <h5>Andi Pratama</h5>
+                                <p>CEO, Brand Lokal "MAJU"</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card fade-in">
+                        <p>"Kami bekerja sama dengan PT Hani untuk koleksi musiman. Tim R&D mereka sangat membantu dalam mewujudkan desain kami menjadi produk berkualitas tinggi."</p>
+                        <div class="testimonial-author">
+                            <i class="fa-solid fa-user-circle"></i>
+                            <div>
+                                <h5>Sarah Wijaya</h5>
+                                <p>Head of Design, "FASHIONISTA"</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card fade-in">
+                        <p>"Komunikasi yang lancar dan fleksibilitas dalam produksi membuat PT Hani menjadi pilihan utama kami untuk kebutuhan garmen skala besar."</p>
+                        <div class="testimonial-author">
+                            <i class="fa-solid fa-user-circle"></i>
+                            <div>
+                                <h5>Budi Santoso</h5>
+                                <p>Procurement Manager, Retail Chain</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================== LAYANAN SECTION =================== -->
+        <section id="layanan">
+            <div class="container">
+                <h2>Layanan Kami</h2>
+                <div class="services-grid">
+                    <div class="card fade-in">
+                        <i class="fa-solid fa-cut"></i>
+                        <h3>Pattern Making & Cutting</h3>
+                        <p>Pola presisi dan pemotongan bahan yang akurat menggunakan teknologi CAD/CAM terkini untuk meminimalkan waste dan memaksimalkan efisiensi.</p>
+                    </div>
+                    <div class="card fade-in">
+                        <i class="fa-solid fa-needle"></i>
+                        <h3>Produksi Jahit (Sewing)</h3>
+                        <p>Garis produksi jahit yang modern dengan tenaga ahli yang mampu mengerjakan berbagai jenis teknik jahit dan konstruksi pakaian yang kompleks.</p>
+                    </div>
+                    <div class="card fade-in">
+                        <i class="fa-solid fa-palette"></i>
+                        <h3>Sablon & Bordir</h3>
+                        <p>Layanan sablon digital dan manual, serta bordir komputerisasi untuk memberikan sentuhan merek dan desain yang berkualitas tinggi pada setiap produk.</p>
+                    </div>
+                    <div class="card fade-in">
+                        <i class="fa-solid fa-box"></i>
+                        <h3>Packing & Quality Control</h3>
+                        <p>Proses QC yang ketat di setiap tahap, diakhiri dengan packing yang rapi dan sesuai standar ekspor, memastikan produk tiba dengan kondisi sempurna.</p>
+                    </div>
+                    <div class="card fade-in">
+                        <i class="fa-solid fa-truck"></i>
+                        <h3>Logistik & Pengiriman</h3>
+                        <p>Manajemen rantai pasokan yang handal untuk memastikan pengiriman tepat waktu ke seluruh wilayah di Indonesia dan mancanegara.</p>
+                    </div>
+                    <div class="card fade-in">
+                        <i class="fa-solid fa-people-group"></i>
+                        <h3>Konsultasi Produk</h3>
+                        <p>Tim ahli kami siap memberikan konsultasi mengenai pemilihan bahan, desain, dan proses produksi untuk mewujudkan visi produk Anda.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================== WHY US SECTION =================== -->
+        <section id="why-us">
+            <div class="container">
+                <h2>Keunggulan Kami</h2>
+                <div class="features-grid">
+                    <div class="feature-item fade-in">
+                        <i class="fa-solid fa-certificate"></i>
+                        <h3>Sertifikasi Internasional</h3>
+                        <p>Tersertifikasi ISO 9001 untuk manajemen mutu dan WRAP untuk praktik produksi yang bertanggung jawab.</p>
+                    </div>
+                    <div class="feature-item fade-in">
+                        <i class="fa-solid fa-users-gear"></i>
+                        <h3>Tim R&D Ahli</h3>
+                        <p>Tim riset dan pengembangan kami selalu siap membantu menciptakan produk inovatif sesuai tren pasar.</p>
+                    </div>
+                    <div class="feature-item fade-in">
+                        <i class="fa-solid fa-leaf"></i>
+                        <h3>Produksi Berkelanjutan</h3>
+                        <p>Kami berkomitmen pada proses produksi yang ramah lingkungan dengan penggunaan bahan daur ulang.</p>
+                    </div>
+                    <div class="feature-item fade-in">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <h3>Garansi Kualitas</h3>
+                        <p>Setiap produk melalui proses QC yang ketat untuk memastikan kepuasan dan kepercayaan klien.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================== FAQ SECTION =================== -->
+        <section id="faq">
+            <div class="container">
+                <h2>Pertanyaan yang Sering Diajukan</h2>
+                <div class="faq-container">
+                    <div class="faq-item fade-in">
+                        <button class="faq-question">Apa saja jenis layanan yang PT Hani tawankan?</button>
+                        <div class="faq-answer">
+                            <p>Kami menawarkan layanan lengkap mulai dari pattern making, cutting, produksi jahit, sablon & bordir, hingga packing dan logistik.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item fade-in">
+                        <button class="faq-question">Berapa Minimum Order Quantity (MOQ) untuk produksi?</button>
+                        <div class="faq-answer">
+                            <p>MOQ kami bervariasi tergantung pada jenis produk dan kompleksitas desain. Silakan hubungi tim kami untuk mendapatkan penawaran terbaik sesuai kebutuhan Anda.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item fade-in">
+                        <button class="faq-question">Apakah PT Hani menerima produksi dengan desain dari klien?</button>
+                        <div class="faq-answer">
+                            <p>Tentu saja. Kami sangat terbuka dan berpengalaman dalam memproduksi pakaian berdasarkan desain dan spesifikasi yang diberikan oleh klien.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- =================== CONTACT SECTION =================== -->
+        <section id="contact">
+            <div class="container">
+                <h2>Hubungi Kami</h2>
+                <div class="contact-container">
+                    <div class="contact-info fade-in">
+                        <h3>Informasi Kontak</h3>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <!-- ALAMAT DIPERBARUI -->
+                            <p>Taman 1, Taman, Kec. Taman, Kabupaten Pemalang, Jawa Tengah 52361</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <a href="tel:+622112345678">+62 21 1234 5678</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <a href="mailto:info@pt-hani.co.id">info@pt-hani.co.id</a>
+                        </div>
+                    </div>
+                    <div class="contact-form fade-in">
+                        <h3>Kirim Pesan</h3>
+                        <form action="#" method="POST">
+                            <div class="form-group">
+                                <label for="name">Nama Lengkap</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Pesan Anda</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn">Kirim Pesan</button>
+                        </form>
+                    </div>
+                    <div class="map-wrapper fade-in">
+                        <!-- PETA DIPERBARUI -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.667393813241!2d109.37479627476559!3d-6.889796993165553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f7365e5a5a5a5%3A0x5a5a5a5a5a5a5a5a!2sTaman%2C%20Kec.%20Taman%2C%20Kabupaten%20Pemalang%2C%20Jawa%20Tengah!5e0!3m2!1sen!2sid!4v1678886400000!5m2!1sen!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- =================== FOOTER =================== -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Tentang PT Hani</h3>
+                    <p>PT Hani adalah produsen garmen terpercaya di Indonesia yang berkomitmen pada kualitas, inovasi, dan keberlanjutan. Kami membangun kemitraan jangka panjang dengan klien kami.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Tautan Cepat</h3>
+                    <ul>
+                        <li><a href="#about">Tentang Kami</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#layanan">Layanan</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Layanan</h3>
+                    <ul>
+                        <li><a href="#">Produksi Massal</a></li>
+                        <li><a href="#">Private Label</a></li>
+                        <li><a href="#">Konsultasi Desain</a></li>
+                        <li><a href="#">Sablon & Bordir</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <p>Dapatkan informasi terbaru tentang tren dan penawaran dari kami.</p>
+                    <form class="newsletter-form" action="#">
+                        <input type="email" placeholder="Email Anda" required>
+                        <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 PT Hani. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- =================== JAVASCRIPT =================== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // --- Mobile Navigation Toggle ---
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.main-nav ul');
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('nav-active');
+            });
+
+            // --- Header Shrink on Scroll ---
+            const header = document.querySelector('.main-header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+
+            // --- Scroll Animations using Intersection Observer ---
+            const faders = document.querySelectorAll('.fade-in');
+            const appearOptions = {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            };
+            const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) {
+                        return;
+                    } else {
+                        entry.target.classList.add('is-visible');
+                        appearOnScroll.unobserve(entry.target);
+                    }
+                });
+            }, appearOptions);
+
+            faders.forEach(fader => {
+                appearOnScroll.observe(fader);
+            });
+
+            // --- Portfolio Filter ---
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+
+                    const filterValue = button.getAttribute('data-filter');
+
+                    portfolioItems.forEach(item => {
+                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                            item.style.display = 'block';
+                            item.classList.remove('is-visible');
+                            void item.offsetWidth;
+                            appearOnScroll.observe(item);
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // --- FAQ Accordion ---
+            const faqQuestions = document.querySelectorAll('.faq-question');
+
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const answer = question.nextElementSibling;
+                    const isActive = question.classList.contains('active');
+
+                    faqQuestions.forEach(q => {
+                        q.classList.remove('active');
+                        q.nextElementSibling.classList.remove('active');
+                    });
+
+                    if (!isActive) {
+                        question.classList.add('active');
+                        answer.classList.add('active');
+                    }
+                });
+            });
+
+            // --- Active Navigation Link on Scroll ---
+            const sections = document.querySelectorAll('section[id]');
+            const navLinksItems = document.querySelectorAll('.main-nav .nav-link');
+
+            const highlightActiveLink = () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (pageYOffset >= (sectionTop - 100)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinksItems.forEach(item => {
+                    item.classList.remove('nav-link-active');
+                    if (item.getAttribute('href').slice(1) === current) {
+                        item.classList.add('nav-link-active');
+                    }
+                });
+            };
+            
+            window.addEventListener('scroll', highlightActiveLink);
+
+            // --- Close Mobile Menu on Link Click ---
+            navLinksItems.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (navLinks.classList.contains('nav-active')) {
+                        navLinks.classList.remove('nav-active');
+                    }
+                });
+            });
+
+        });
+    </script>
+</body>
+</html>
